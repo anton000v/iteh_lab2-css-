@@ -1,0 +1,127 @@
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #00d6e2;
+    border-radius: 100%;
+    background: #fff;
+  
+  border: 1px #00d6e2 solid;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width:12px;
+    height: 12px;
+    background: #0000CD;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 2;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.menu-container {
+  color: #fff;
+  background-color: #5995DA;  /* Blue */
+  padding: 20px 0;
+}
+
+.menu {
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+}
+.third {
+  /* display: flex; */
+  height: 60px;
+  justify-content: space-between;
+  background-color:#0000CD;
+}
+.fourth {
+  display: flex;
+  justify-content: space-between;
+  background-color:#0000CD;
+}
+.first {
+  display: flex;
+  justify-content: space-between;
+  background-color:#0000CD;
+}
+.seconds {
+  display: flex;
+  justify-content: space-between;
+  background-color:#0000CD;
+}
+
+body{ padding:1em; font-family:arial; }
+input{ display:none; }
+label{ padding:.2em .5em; }
+label:hover{ background:#ccc; cursor:pointer; }
+input:checked + label{ font-weight:bold; background:#ccc; }
+
+.flex {
+    display: flex;
+	
+	background: #9ba5b3;     padding: 5px;
+}
+.flex-itm-1 {  background: green;  
+font-size: 2.5rem;     
+color: #eee;     
+margin: 5px;     
+padding: 15px; }
+.flex-itm-2 {  background: blue;  
+font-size: 2.5rem;     
+color: #eee;     
+margin: 5px;     
+padding: 15px; }
+
+.flex-itm-3 {  background: blue ;
+font-size: 2.5rem;     
+color: #eee;     
+margin: 5px;     
+padding: 15px; }
+.flex-itm-4 {  background: red;  
+font-size: 2.5rem;     
+color: #eee;     
+margin: 5px;     
+padding: 15px; }
+
+
+#flex-start:checked ~ .flex {    justify-content: flex-start; }
+#flex-end:checked ~ .flex {      justify-content: flex-end; }
+#center:checked ~ .flex {        justify-content: center; }
+#space-between:checked ~ .flex { justify-content: space-between; }
+#space-evenly:checked ~ .flex { justify-content: space-evenly; }
+#space-around:checked ~ .flex {  justify-content: space-around; }
+}
